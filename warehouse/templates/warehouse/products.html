@@ -1,0 +1,22 @@
+{% extends 'warehouse/main.html' %}
+
+
+{% block content %}
+
+
+
+
+<h1>This is the Product Page</h1>
+
+
+{% for i in all_products %}
+
+{{i.name}}  {{i.SKU}} {{i.status}} <br>{{i.id}}<br>
+<a class="btn btn-primary" href="{% url 'product_detail' i.id %}"> View </a>
+<hr>
+
+{% endfor %}
+
+
+
+{% endblock %}
